@@ -1,0 +1,36 @@
+Page accueil.php 
+    Bouton jouer
+    Bouton classement
+    Regles
+
+Page classement.php 
+    Menu deroulant choix de classe - php
+    Tableau classement general - Requete
+    Tableau classement des classes - Requete
+    Tableau classement par classes - Requete
+
+page index.php
+    Login - php 
+    bouton valider
+    
+
+page question.php
+    Timer - Java 15 sec
+    Afficher les points - Requete
+    Afficher le timer - Java
+    Afficher une question (Q) RNG ou dans l'ordre - Requete 
+    Afficher les reponse aux questions (A B C D) - Requete
+    Code de selection de la reponse - Java
+    Valeur de la reponse est attribuer à une variable (VR) 
+
+page reponse.php
+    Timer - Java 10 sec
+    Afficher les points - Requete   
+    Afficher question ( Q ) - Requete   
+    Afficher la bonne reponse ( R ) - Requete
+    Verification de la reponse ( VR ) - php Requete
+    Afficher le top 3 - Requete
+
+page header.php 
+
+page connection.php 
