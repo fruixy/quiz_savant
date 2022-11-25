@@ -14,18 +14,6 @@ CREATE TABLE `Joueurs` (
 	`Nom` VARCHAR(20) NOT NULL,
     `Prenom` VARCHAR(20) NOT NULL,
     `Classe` VARCHAR(20) NOT NULL,
-    `Score` int(4) NOT NULL,
-	PRIMARY KEY (`ID`)
-)ENGINE=InnoDB;
-
-<--RESET DE LA TABLE -->
-
-DROP TABLE 'Joueurs';
-CREATE TABLE `Joueurs` (
-	`ID` INT NOT NULL AUTO_INCREMENT,
-	`Nom` VARCHAR(20) NOT NULL,
-    `Prenom` VARCHAR(20) NOT NULL,
-    `Classe` VARCHAR(20) NOT NULL,
-    `Score` int(4) NOT NULL,
+    `Score` int(2) NOT NULL,
 	PRIMARY KEY (`ID`)
 )ENGINE=InnoDB;
