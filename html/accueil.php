@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php require '../helper/header.php'; ?>
 
 <body>
@@ -16,19 +15,8 @@
         </ul>
     </div>
     <div class="bouton">
-        <button href="./defi" class="b1"><a class="text-button">défi</a></button>
-    </div>
-    <div class="bouton">
-        <button href="./classement" class="b2"><a class="text-button">classement</a></button>
+        <button href="./defi"><a class="text-button">défi</a></button>
+        <button href="./classement"><a class="text-button">classement</a></button>
     </div>
     
 </body>
-=======
-<?php require 'C:\Apache24\helper\header.php'; ?>
-<body>
-
-<a href="\index.php" class="pure-button pure-button-primary">Test</a>
-
-</body>
-</html>
->>>>>>> 4cb2f7ecd055bd8e4b51f08b34ee05977efd6755

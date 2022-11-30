@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php require 'C:\Apache24\helper\header.php'; ?>
 
 <html>
@@ -13,6 +12,3 @@
 
 </body>
 </html>
-=======
-
->>>>>>> 4cb2f7ecd055bd8e4b51f08b34ee05977efd6755
