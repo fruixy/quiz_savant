@@ -29,3 +29,24 @@ if ($conn->connect_error) {
   echo "Connected successfully";
 
 ?>
+
+
+<?php   
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    
+        $Score=$_POST['Score'];
+        //requête d'insertion SQL
+        require('../helper/connection.php');
+        $query = $pdo->prepare("UPDATE Joueurs SET Score=:Score WHERE ID=:ID;");
+        $success = $query->execute([   
+              "Score" => $Score,
+        ]);
+        if($success){
+        echo "Le score a bien été ajouter !";
+        }else {
+            $error = $query->errorInfo()[2];
+            echo "Erreur : $error \n";
+        }
+    }
+
+?>
