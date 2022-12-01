@@ -1,8 +1,8 @@
 <?php require '../helper/head.php'; 
 require('../helper/connection.php');?>
-<!--Pour les tests il faut penser a rajouter le /?ID=1 dans l'URL
+<!--Pour les tests il faut penser a rajouter le /?ID=1 dans l'URL -->
+<!-- Afficher les questions et les reponses -->
 <?php
-
 $query = $pdo->prepare("SELECT * FROM Questions WHERE ID=:ID");
 $success = $query->execute([
     "ID"=>intval($_GET["ID"])
@@ -18,9 +18,6 @@ $reponse = $query->fetch(PDO::FETCH_ASSOC);
         rep D : <?= $reponse["D"] ?><br><br>
         Bonne reponse : <?= $reponse["R"] ?><br><br>
 
-
-
-
 <?php
 /*Verification du lien entre la bdd et php*/
 if ($conn->connect_error) {
@@ -30,7 +27,7 @@ if ($conn->connect_error) {
 
 ?>
 
-
+<!-- modifier le score d'un joueur -->
 <?php   
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     
@@ -50,11 +47,12 @@ if ($conn->connect_error) {
     }
 
 ?>
-
+<!-- Recupere le score d'un joueur -->
 <?php
-        $query = $pdo->prepare("SELECT * FROM Joueurs WHERE ID=:ID");
+        $query = $pdo->prepare("SELECT Score FROM Joueurs WHERE ID=:ID");
         $success = $query->execute(["ID"=>intval($_GET["ID"])]); 
         $reponse = $query->fetch(PDO::FETCH_ASSOC);
         ?>
 
-        Score : <?= $reponse["Score"] ?>
+        Score : <?= $reponse["Score"] 
+?>
