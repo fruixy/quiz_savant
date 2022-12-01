@@ -3,46 +3,36 @@
 <html>
 <body>
 
-<META HTTP-EQUIV="Refresh" CONTENT="30; URL=\reponse.php">
 
 <body>
-    <div id="timerquestion"></div>
-    <script src="timerquestion.js"></script>
+    <div class="site">
+        <div class="top">
+            <div class="image">
+                <img>
+            </div>
+            <div class="timer">
+            </div>
+        </div>
+        <div class="div_question">
+            <div class="question">
+                <p class="texte">que signifit ce pictogramme ?</p>
+            </div>
+        </div>
+        <div class="reponse">
+            <div class="b1">
+                <button><a class="texte_bouton">tunis</a></button>
+            </div>
+            <div class="b2">
+                <button><a class="texte_bouton">paris</a></button>
+            </div>
+            <div class="b3">
+                <button><a class="texte_bouton">alger</a></button>
+            </div>
+            <div class="b4">
+                <button><a class="texte_bouton">berlin</a></button>
+            </div>
+        </div>
+    </div>
 </body>
 
-<body>
-    <button> LOL </button>
-</body>
-
-<body>
-    <?php echo (rand(0, 20)); ?>
-</body>
-
-<body>
-<?php
-
-$haz=array(1,
-rand(2,3),
-rand(4,5),
-rand(6,7),
-rand(8,9),0);
-
-shuffle($haz);
-
-$co="";
-$i=0;
-
-while($i<2){
-$co.= $haz[$i];
-  if(!in_array($co,$haz)){
-  }else{}
-$i++;
-}
-
-echo $co;
-
-?>
-</body>
-
-</body>
 </html>
