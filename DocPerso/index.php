@@ -50,3 +50,11 @@ if ($conn->connect_error) {
     }
 
 ?>
+
+<?php
+        $query = $pdo->prepare("SELECT * FROM Joueurs WHERE ID=:ID");
+        $success = $query->execute(["ID"=>intval($_GET["ID"])]); 
+        $reponse = $query->fetch(PDO::FETCH_ASSOC);
+        ?>
+
+        Score : <?= $reponse["Score"] ?>
