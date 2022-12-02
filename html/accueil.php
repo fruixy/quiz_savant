@@ -2,7 +2,7 @@
 
 <body>
     <div class="logo">
-        <img src="./assets/images/logo.png" alt="" height="110%;">
+        <img src="./assets/images/logo.png" alt="" height="110%;" >
     </div>
     <div class="regle">
         <ul>
@@ -15,8 +15,8 @@
         </ul>
     </div>
     <div class="bouton">
-        <button href="./defi"><a class="text-button">défi</a></button>
-        <button href="./classement"><a class="text-button">classement</a></button>
+        <button href="./defi" class="b1"><a class="text-button">défi</a></button>
+        <button href="./classement" class="b2"><a class="text-button">classement</a></button>
     </div>
     
 </body>

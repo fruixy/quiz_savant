@@ -2,13 +2,10 @@
 
 <html>
 <body>
-
-
-<body>
     <div class="site">
         <div class="top">
             <div class="image">
-                <img>
+                <img src="./assets/images/logo.png" alt="" class="logo">
             </div>
             <div class="timer">
             </div>
