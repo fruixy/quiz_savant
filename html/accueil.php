@@ -6,8 +6,8 @@
     </div>
     <div class="regle">
         <ul>
-            <li>Il y a 20 questions au total</li>
             <li>Tu as 30 secondes pour répondre aux questions</li>
+            <li>Il y a 20 questions au total</li>
             <li>Plus vite tu réponds, plus de point tu auras</li>
             <li>Tu as 4 possibilités de réponse, une seule est la bonne</li>
             <li>Soit rapide et juste pour être le vainqueur</li>

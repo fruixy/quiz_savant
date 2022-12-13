@@ -49,18 +49,18 @@ html{
 body{
     background-image: linear-gradient(to top, rgb(55, 55, 18) 0%, rgb(0, 0, 0) 70%); 
     display: grid;
-    grid-template-rows: 20% 45% 20%;
+    grid-template-rows: 20% 45%;
 }
 
 .div-logo{
-    margin-top: 3%;
+    margin-top: 7%;
     grid-row-start: 1;
     text-align: center;
 }
 
 .form{
     grid-row-start: 3;
-    margin-top: 5%;
+    margin-top: 13%;
 }
 
 .logo{
