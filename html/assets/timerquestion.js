@@ -10,6 +10,7 @@ setInterval(() => {
   minutes = minutes < 10 ? "0" + minutes : minutes
   secondes = secondes < 10 ? "0" + secondes : secondes
 
-  timerElement.innerText = `${minutes}:${secondes}`
+  timerElement.innerText = `${secondes}`
   temps = temps <= 0 ? 0 : temps - 1
 }, 1000)
+
