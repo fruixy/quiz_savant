@@ -1,6 +1,6 @@
-<?php require '../helper/header.php'; ?>
-<?php require '../helper/connection.php'; ?>
-<?php require '../helper/rng.php'; ?>
+<?php require '..\helper\header.php'; ?>
+<?php require '..\helper\connection.php'; ?>
+<?php require '..\helper\rng.php'; ?>
 
 <?php
 /* Requete pour recuperer la question à partir de l'ID donné dans le lien */
@@ -15,7 +15,7 @@
     <div class="site">
         <div class="top">
             <div class="image">
-                <img src="./assets/images/logo.png" alt="" class="logo">
+                <img src=".\assets\images\logo.png" alt="" class="logo">
             </div>
         </div>
         <div class="bar"></div>

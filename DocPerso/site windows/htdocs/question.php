@@ -1,8 +1,8 @@
-<?php require '../helper/header.php'; ?>
-<?php require '../helper/connection.php'; ?>
-<?php require '../helper/rng.php'; ?>
+<?php require '..\helper\header.php'; ?>
+<?php require '..\helper\connection.php'; ?>
+<?php require '..\helper\rng.php'; ?>
 
-<link rel="stylesheet" type="text/css" href="assets/style_question.css" />
+<link rel="stylesheet" type="text/css" href="assets\style_question.css" />
 
 <?php
 /* Test pour verifeir que l'IDJ est bon */
@@ -25,7 +25,7 @@ echo $_SESSION['IDJ'];
     <div class="site">
         <div class="top">
             <div class="image">
-                <img src="./assets/images/logo.png" alt="" class="logo">
+                <img src=".\assets\images\logo.png" alt="" class="logo">
             </div>
         </div>
         <div class="bar"></div>
