@@ -13,3 +13,4 @@ setInterval(() => {
   timerElement.innerText = `${secondes}`
   temps = temps <= 0 ? 0 : temps - 1
 }, 1000)
+

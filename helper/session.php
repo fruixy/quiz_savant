@@ -1,15 +1,12 @@
-<?php
-
-/*
-On utilise session_id() pour récupérer l'id de session s'il existe.
- Si l'id de session n'existe  pas, session_id() rnevoie une chaine
- de caractères 
-*/ 
-
-$id_session = session_id();
-
-    if($id_session){
-        echo 'ID de session (récupéré via session_id()) : <br>'
-        .$id_session. '<br>';
-    }
-?>
+<?php session_start(); 
+if($_SERVER['REQUEST_URI'] === "/login.php"){
+    #l'utilisateur souhaite accéder à la page de login, on le laisse faire
+}
+else if(isset($_SESSION['logon']) &&  $_SESSION['logon'] === true){
+    # l'utilisateur demande une page différente de /login.php et il est authentifié
+    # on le laisse passer
+} else {
+    # sinon on le redirige vers /login.php et ON ARRÊTE l'exécution du script
+    header('Location: /login.php');
+    die();
+} ?>

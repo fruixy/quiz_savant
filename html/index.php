@@ -1,13 +1,9 @@
 <?php require '../helper/header.php'; ?>
-
-<link rel="stylesheet" type="text/css" href="assets/style_index.css" />
-
 <html>
 <body>
 
     <div>
         <?php 
-        /* Requete pour inserer les données dans la database */
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $Nom=$_POST['nom'];
             $Prenom=$_POST['prenom'];
@@ -22,23 +18,17 @@
                   "Classe" => $Classe,
                   "Score" => $Score,
             ]);
-
             if($success){
             echo "Le joueur a bien été ajouter !";
-            session_start();
-            /* On met le prenom et le nom dans une variable de Session */
             $_SESSION['logon'] = true;
-            $_SESSION['Prenom'] = $Prenom;
-            $_SESSION['Nom'] = $Nom;
             }else {
                 $error = $query->errorInfo()[2];
                 echo "Erreur : $error \n";
             }
         }?>
 
-        <!-- Verification de la connection -->
         <?php if(isset($_SESSION['logon']) && $_SESSION['logon'] === true): ?>
-            <?php header('Location: /accueil.php');
+            <?php header('Location: ./acceuil.php');
             die();
             ?>
 
@@ -51,18 +41,17 @@
                 <fieldset>
                     <div class="divindex">
                         <label for="prenom"></label>
-                        <input id="prenom" name="prenom" type="text" name="text" placeholder="Prénom" required="required" />
+                        <input id="prenom" name="prenom" type="text" name="text" placeholder="Prénom" />
                     </div>
                     <br> 
                     <div class="divindex">
                         <label for="nom"></label>
-                        <input id="nom" name="nom" type="text" name="text" placeholder="Nom" required="required" />
+                        <input id="nom" name="nom" type="text" name="text" placeholder="Nom" />
                     </div>
                     <br>
                     <div class="divindex" >
                     <label for="classe"></label>
-                        <select id="classe" name="classe" required="required">
-                            <option>Classe</option>
+                        <select id="classe" name="classe">
                             <option>RT</option>
                             <option>MP</option>
                             <option>TC</option>
