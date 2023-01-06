@@ -39,7 +39,7 @@
         opacity: 1;
         transform: translateX(0px);
     }
-}   
+}
 
 
 html{
@@ -80,7 +80,7 @@ button{
     text-align: center;
     border-radius: 50px;
     cursor: pointer;
-    
+
     margin-top: 4%;
 
 }

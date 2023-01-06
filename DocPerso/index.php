@@ -10,7 +10,6 @@ $success = $query->execute([
 $reponse = $query->fetch(PDO::FETCH_ASSOC);
 ?>
 
-
         Question : <?= $reponse["Q"] ?><br><br>
         rep A : <?= $reponse["A"]?> <br><br>
         rep B : <?= $reponse["B"] ?><br><br>
