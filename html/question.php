@@ -1,6 +1,7 @@
 <?php require '../helper/header.php'; ?>
 <?php require '../helper/connection.php'; ?>
 <?php require '../helper/rng.php'; ?>
+<?php require '../helper/rng.php'; ?>
 
 <link rel="stylesheet" type="text/css" href="assets/style_question.css" />
 
@@ -16,6 +17,8 @@ echo $_SESSION['IDJ'];
     "IDQ"=>intval($_GET["IDQ"])]); 
     $Question = $query->fetch(PDO::FETCH_ASSOC); 
 ?>
+
+
 
 <!-- On recharge la page au bout de 33 sec -->
 <meta http-equiv="refresh" content="33;url=question.php?IDQ=<?php echo $random?>">
@@ -36,30 +39,32 @@ echo $_SESSION['IDJ'];
         </div>
         <form action="" method="POST">
         <div class="reponse">
+        <input id="bonne_reponse" type="hidden" name="reponse" value="<?= $Question["R"]; ?>">
                 <div class="b1">
-                    <input id="hide1" type="submit" name="BoutonA" value=" <?= $Question["A"]; ?>" ><a class="texte_bouton" > </a></input>
+                    <input id="hide1" type="submit" name="reponse" value="<?= $Question["A"]; ?>">
                 </div>
                 <div class="b2">
-                    <input id="hide2" type="submit" name="BoutonB" value=" <?= $Question["B"]; ?>" ><a class="texte_bouton" > </a></input>
+                    <input id="hide2" type="submit" name="reponse" value="<?= $Question["B"]; ?>">
                 </div>
                 <div class="b3">
-                    <input id="hide3" type="submit" name="BoutonC" value=" <?= $Question["C"]; ?>" ><a class="texte_bouton" > </a></input>
+                    <input id="hide3" type="submit" name="reponse" value="<?= $Question["C"]; ?>">
                 </div>
                 <div class="b4">
-                    <input id="hide4" type="submit" name="BoutonD" value=" <?= $Question["D"]; ?>" ><a class="texte_bouton" > </a></input>
+                    <input id="hide4" type="submit" name="reponse" value="<?= $Question["D"]; ?>">
                 </div>
             
             <div class="b5">
-                <a class="texte_reponse"> <?= $Question["R"]; ?> </a>
+                <a class="texte_reponse" id="reponse_juste"><?= $Question["R"];?> </a>
+                <input id="bonne_reponse" type="hidden" name="reponse" value="<?= $Question["R"]; ?>">
             </div>
         </div>
         </form>
     </div>
+
     <script>
 
 let points = 101;
 let vitesse = "";
-let resultat = "";
   function decreasePoints() {
     points--;
   }
@@ -76,53 +81,78 @@ let resultat = "";
   const button4 = document.getElementById('hide4');
   
 
+  
+
   button1.addEventListener('click', () => {
+    const input = document.querySelector('#hide1');
+    let click = input.value;
+    console.log(click);
+    
     button1.remove();
     button2.remove();
     button3.remove();
     button4.remove();
     vitesse = points;
+
+    Score(click);
   });
 
   button2.addEventListener('click', () => {
+    const input = document.querySelector('#hide2');
+    let click = input.value;
+    console.log(click);
+
     button1.remove();
     button2.remove();
     button3.remove();
     button4.remove();
     vitesse = points;
+
+    Score(click);
   });
 
   button3.addEventListener('click', () => {
+    const input = document.querySelector('#hide3');
+    let click = input.value;
+    console.log(click);
+
     button1.remove();
     button2.remove();
     button3.remove();
     button4.remove();
     vitesse = points;
+
+    Score(click);
   });
 
   button4.addEventListener('click', () => {
+    const input = document.querySelector('#hide4');
+    let click = input.value;
+    console.log(click);
+
     button1.remove();
     button2.remove();
     button3.remove();
     button4.remove();
     vitesse = points;
+
+    Score(click);
   });
 
-  function Score() {
+  const rep = document.querySelector('#bonne_reponse');
+    let bonne_reponse = rep.value;
+    console.log(bonne_reponse);
+
+  function Score(click) {
+  console.log(bonne_reponse);
+  if (click === bonne_reponse) {
     console.log(vitesse);
-    resultat = <?php echo json_encode($validation); ?>;
-    if (resultat = 1) {
-        console.log("envoie")
-        fetch('./score.php', {
-            method: 'POST',
-            body:'score= ' + encodeURIComponent(resultat),
-            headers: {
-                'Content-Type': 'application/x-www-form-urlenncoded'
-            }
-        });
-    }
+  } else {
+    console.log('non');
   }
-  setTimeout(Score, 30000);
+}
+
+  
 
 </script>
 

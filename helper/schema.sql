@@ -37,11 +37,11 @@ CREATE TABLE `Joueurs` (
 
 <-- Questions -->
 
-INSERT INTO Questions (Q,A,B,C,D,R, Image) VALUES ('Quelle est la formule de la quantité de matière n ?','n = m/images/M','n = M/images/m','n = m*M','n = M+m','n = m/images/M', 'assets/images/question1.png');
+INSERT INTO Questions (Q,A,B,C,D,R, Image) VALUES ('Quelle est la formule de la quantité de matière n ?','n = m/M','n = M/m','n = m*M','n = M+m','n = m/M', 'assets/images/question1.png');
 INSERT INTO Questions (Q,A,B,C,D,R, Image) VALUES ('Que signifie ce pictogramme :','Explosif', 'Comburant','Toxique','Inflammable', 'Inflammable', 'assets/images/question2.png');
 INSERT INTO Questions (Q,A,B,C,D,R, Image) VALUES ('Quelle est la dérivé de 8x² ?','10x','16x', '4x','16x²','16x', 'assets/images/question3.png');
 INSERT INTO Questions (Q,A,B,C,D,R, Image) VALUES ('Quel est le domaine de définition x:', 'R*','R+*','[0;+]','] 0;+[','R*', 'assets/images/question4.png');
-INSERT INTO Questions (Q,A,B,C,D,R, Image) VALUES ('Quelle est la formule de la fréquence en fonction de la période ?','F = 1/images/T','F = 1/images/t','F = T/images/1','F = t/images/1','F = 1/images/T', 'assets/images/question5.png');
+INSERT INTO Questions (Q,A,B,C,D,R, Image) VALUES ('Quelle est la formule de la fréquence en fonction de la période ?','F = 1/T','F = 1/t','F = T/1','F = t/1','F = 1/T', 'assets/images/question5.png');
 INSERT INTO Questions (Q,A,B,C,D,R, Image) VALUES ('Compléter cette suite de chiffres (appelé suite de Fibonacci):  1 - 1 - 2 - 3 - 5 - 8 - …','11','12','13','14','13', 'assets/images/question6.png');
 INSERT INTO Questions (Q,A,B,C,D,R, Image) VALUES ('De quel scientifique français nous vient la célèbre phrase “Rien ne se perd, rien ne se crée, tout se transforme.” ?','Albert Einstein','Marie Curie','Antoine Lavoisier','Blaise Pascal','Antoine Lavoisier', 'assets/images/question7.png');
 INSERT INTO Questions (Q,A,B,C,D,R, Image) VALUES ('Quel est l’élément du tableau périodique symbolisé par “N” et qui, sous sa forme N2, compose près de 80% de notre atmosphère ?','Le dioxyde de carbone','L’azote','L’oxygène','L’Hélium','L’azote', 'assets/images/question8.png');  
