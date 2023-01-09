@@ -2,13 +2,11 @@
 <link rel="stylesheet" type="text/css" href="./assets/style_classement.css" />
 <body>
     <div id="tete">
+        <a id="logo"><img src="assets/images/logo.png" height="100%"></a>
     
-        <!-- <a id="logo" href="./accueil.php"><img src="assets/images/logo.png" height="100%"></a> -->
-        <a id="logo" href="./logout.php"><img src="assets/images/logo.png" height="100%"></a>
-    
-        <div id="B1">
-            <button id="B2" type="submit">All-Time</button>
-            <button id="B2" type="submit">Classe</button>
+        <div id="div_B">
+            <button id="B1">classement par joueur</button>
+            <button id="B2">classement par groupe</button>
         </div>   
     </div>
     <div id="space">
@@ -22,6 +20,7 @@
                    <tr>
                       <th>Prénom</th>
                       <th>Nom</th>
+                      <th>Groupe</th>
                       <th>Score</th>
                    </tr>
                  </table>
@@ -37,7 +36,8 @@
                             foreach ($query as $joueur): ?>
                                 <tr>
                                     <td><?= $joueur["Prenom"]?></td> 
-                                    <td><?= $joueur["Nom"]?></td> 
+                                    <td><?= $joueur["Nom"]?></td>
+                                    <td><?= $joueur["Classe"]?></td>  
                                     <td><?= $joueur["Score"]?></td> 
                                 </tr>
                             <?php endforeach ; ?>
@@ -47,4 +47,4 @@
             </tr>
         </table>
     </div>
-</body
+</body>

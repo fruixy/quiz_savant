@@ -152,6 +152,12 @@ let vitesse = "";
   }
 }
 
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = fonction() {
+  if (this.readyState == 4 && this.status == 200) {
+    var 
+  }
+}
   
 
 </script>
