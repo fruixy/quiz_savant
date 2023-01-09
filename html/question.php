@@ -1,7 +1,7 @@
 <?php require '../helper/header.php'; ?>
 <?php require '../helper/connection.php'; ?>
 <?php require '../helper/rng.php'; ?>
-<?php require '../helper/rng.php'; ?>
+
 
 <link rel="stylesheet" type="text/css" href="assets/style_question.css" />
 
@@ -60,107 +60,10 @@ echo $_SESSION['IDJ'];
         </div>
         </form>
     </div>
-
-    <script>
-
-let points = 101;
-let vitesse = "";
-  function decreasePoints() {
-    points--;
-  }
-
-  setInterval(decreasePoints, 300);
-
-
-
-
-
-  const button1 = document.getElementById('hide1');
-  const button2 = document.getElementById('hide2');
-  const button3 = document.getElementById('hide3');
-  const button4 = document.getElementById('hide4');
-  
-
-  
-
-  button1.addEventListener('click', () => {
-    const input = document.querySelector('#hide1');
-    let click = input.value;
-    console.log(click);
-    
-    button1.remove();
-    button2.remove();
-    button3.remove();
-    button4.remove();
-    vitesse = points;
-
-    Score(click);
-  });
-
-  button2.addEventListener('click', () => {
-    const input = document.querySelector('#hide2');
-    let click = input.value;
-    console.log(click);
-
-    button1.remove();
-    button2.remove();
-    button3.remove();
-    button4.remove();
-    vitesse = points;
-
-    Score(click);
-  });
-
-  button3.addEventListener('click', () => {
-    const input = document.querySelector('#hide3');
-    let click = input.value;
-    console.log(click);
-
-    button1.remove();
-    button2.remove();
-    button3.remove();
-    button4.remove();
-    vitesse = points;
-
-    Score(click);
-  });
-
-  button4.addEventListener('click', () => {
-    const input = document.querySelector('#hide4');
-    let click = input.value;
-    console.log(click);
-
-    button1.remove();
-    button2.remove();
-    button3.remove();
-    button4.remove();
-    vitesse = points;
-
-    Score(click);
-  });
-
-  const rep = document.querySelector('#bonne_reponse');
-    let bonne_reponse = rep.value;
-    console.log(bonne_reponse);
-
-  function Score(click) {
-  console.log(bonne_reponse);
-  if (click === bonne_reponse) {
-    console.log(vitesse);
-  } else {
-    console.log('non');
-  }
-}
-
-var xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = fonction() {
-  if (this.readyState == 4 && this.status == 200) {
-    var 
-  }
-}
-  
-
-</script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/calcule_points.js"></script>
+    <script src="assets/js/choix.js"></script>
+    <script src="assets/js/comparaison_envoie.js"></script>
 
 
 
