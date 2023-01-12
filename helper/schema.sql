@@ -3,7 +3,6 @@ Use Savant ;
 CREATE USER 'Savant'@'localhost' IDENTIFIED BY 'gtrnet';
 GRANT ALL PRIVILEGES ON Savant.* TO 'Savant'@'localhost' WITH GRANT OPTION; 
 
-<-- Table Questions -->
 
 CREATE TABLE `Questions` (
 	`IDQ` INT NOT NULL AUTO_INCREMENT,
@@ -17,9 +16,8 @@ CREATE TABLE `Questions` (
 	PRIMARY KEY (`IDQ`)
 )ENGINE=InnoDB;
 
-<-- Table Joueurs -->
 
-CREATE TABLE `Joueurs` ;
+CREATE TABLE `Joueurs` (
     `IDJ` INT NOT NULL AUTO_INCREMENT,
     `Nom` VARCHAR(20) NOT NULL,
     `Prenom` VARCHAR(20) NOT NULL,
@@ -28,12 +26,10 @@ CREATE TABLE `Joueurs` ;
 	PRIMARY KEY (`IDJ`)
 )ENGINE=InnoDB;
 
-<-- Table intermediaire -->
 CREATE TABLE Intermediaire (
     `IDJI` INT(2) NOT NULL,
     `IDQI` int(2) NOT NULL
 )ENGINE=InnoDB;
-<-- Questions -->
 
 INSERT INTO Questions (Q,A,B,C,D,R, Image) VALUES ('Quelle est la formule de la quantité de matière n ?','n = m/M','n = M/m','n = m*M','n = M+m','n = m/M', 'assets/images/question1.png');
 INSERT INTO Questions (Q,A,B,C,D,R, Image) VALUES ('Que signifie ce pictogramme :','Explosif', 'Comburant','Toxique','Inflammable', 'Inflammable', 'assets/images/question2.png');
