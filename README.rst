@@ -12,10 +12,20 @@ Description
 ===========
 
    - Site web pour tester votre niveau en physique
-   - Dévelloper à la demande__ des BUT Mesures Physiques 
+   - Dévelloper à la demande__ des BUT Mesures Physiques
    
    __ https://updago.univ-poitiers.fr/pluginfile.php/4706186/mod_resource/content/1/build/content/projets/cc_quiz_journees_savantes.html
-    
+
+
+####
+
+Installation
+===========
+
+- Suivez le tutoriel d'installation__
+- serveur conseillé : Apache
+- Base de donnée conseillé : MySQL
+
     
 ####
 
