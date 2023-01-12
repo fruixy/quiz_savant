@@ -14,7 +14,7 @@ Description
    - Site web pour tester votre niveau en physique
    - Dévelloper à la demande__ des BUT Mesures Physiques 
    
-   __ https://updago.univ-poitiers.fr/pluginfile.php/4706186/mod_resource/content/1/build/index.html
+   __ https://updago.univ-poitiers.fr/pluginfile.php/4706186/mod_resource/content/1/build/content/projets/cc_quiz_journees_savantes.html
     
     
 ####
