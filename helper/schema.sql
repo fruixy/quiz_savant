@@ -26,6 +26,8 @@ CREATE TABLE `Joueurs` (
 	PRIMARY KEY (`IDJ`)
 )ENGINE=InnoDB;
 
+ALTER TABLE Joueurs ADD UNIQUE (Nom, Prenom);
+
 CREATE TABLE Intermediaire (
     `IDJI` INT(2) NOT NULL,
     `IDQI` int(2) NOT NULL

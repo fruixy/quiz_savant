@@ -44,6 +44,6 @@ echo $_SESSION['IDJ'];
     <?php require '../helper/rng.php'; ?>
 
     <div class="bouton">
-        <button><a class="text-button" style="text-decoration: none; color: white;" href='question.php?IDQ=<?php echo $random?>'>Jouer</a></button>
+        <button><a class="text-button" style="text-decoration: none; color: white;" href='question.php?IDQ=<?php echo $IDQI?>'>Jouer</a></button>
     </div>
 </body>

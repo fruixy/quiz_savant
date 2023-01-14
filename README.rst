@@ -1,4 +1,4 @@
-.. image:: https://github.com/fruixy/quiz_savant/blob/master/html/assets/images/logo.png?raw=true
+.. image:: https://github.com/fruixy/quiz_savant/blob/master/html/assets/images/logo_git.png?raw=true
       :align: center
 
 =========================================
@@ -56,3 +56,4 @@ __ https://github.com/Armand-Cloug
 __ https://github.com/Armand-Cloug
 __ https://github.com/Maelbo
 __ https://github.com/Maelbo
+

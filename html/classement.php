@@ -5,8 +5,8 @@
         <a id="logo" href='/logout_admin.php' ><img src="assets/images/logo.png" height="100%"></a>
     
         <div id="div_B">
-            <button id="b1" ><a class="text-button">Classement des Joueurs </a></button>
-            <button id="b2" ><a class="text-button" href='/classement_groupe.php' style='text-decoration: none; color: white;' > Classement des Classes </a></button>
+            <a href='/classement.php' > <button id="b1" class="text-button">Classement Joueurs </button></a>
+            <a href='/classement_groupe.php' > <button id="b2" class="text-button">Classement Teams </button></a>
 
         </div>   
     </div>

@@ -5,10 +5,6 @@
 
 <link rel="stylesheet" type="text/css" href="assets/style_question.css" />
 
-<?php
-/* Test pour verifeir que l'IDJ est bon */
-echo $_SESSION['IDJ'];
-?>
 
 <?php
 /* Requete pour recuperer la question à partir de l'ID donné dans le lien */
@@ -21,7 +17,7 @@ echo $_SESSION['IDJ'];
 
 
 <!-- On recharge la page au bout de 33 sec -->
-<meta http-equiv="refresh" content="33;url=question.php?IDQ=<?php echo $random?>">
+<meta http-equiv="refresh" content="1;url=question.php?IDQ=<?php echo $IDQI?>">
 
 <html>
 <body>
