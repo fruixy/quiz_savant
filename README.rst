@@ -26,7 +26,8 @@ Installation
 - serveur conseillé : Apache
 - Base de donnée conseillé : MySQL
 
-    
+   __ https://updago.univ-poitiers.fr/pluginfile.php/4706186/mod_resource/content/1/build/content/projets/cc_quiz_journees_savantes.html
+
 ####
 
 Téléchargement
