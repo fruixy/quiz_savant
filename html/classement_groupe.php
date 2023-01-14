@@ -2,11 +2,11 @@
 <link rel="stylesheet" type="text/css" href="./assets/style_classement_groupe.css" />
 <body>
     <div id="tete">
-        <a id="logo"><img src="assets/images/logo.png" height="150%"></a>
+        <a id="logo" href='/logout_admin.php' ><img src="assets/images/logo.png" height="150%"></a>
     
         <div id="div_B">
-            <button id="B1">classement par joueur</button>
-            <button id="B2">classement par groupe</button>
+            <button id="b1" ><a class="text-button" href='/classement.php' style='text-decoration: none; color: white;' > Classement des Joueurs </a></button>
+            <button id="b2" ><a class="text-button"> Classement des Classes </a></button>
         </div>   
     </div>
     <div id="space">

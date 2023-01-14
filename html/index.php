@@ -62,11 +62,15 @@
                     <div class="divindex" >
                     <label for="classe"></label>
                         <select id="classe" name="classe" placeholder="Groupe" required="required">
-                            <option>team 1</option>
-                            <option>team 2</option>
-                            <option>team 3</option>
-                            <option>team 4</option>
-                            <option>team 5</option>
+                            <option>Classe 1</option>
+                            <option>Classe 2</option>
+                            <option>Classe 3</option>
+                            <option>Classe 4</option>
+                            <option>Classe 5</option>
+                            <option>Classe 6/option>
+                            <option>Classe 7</option>
+                            <option>Classe 8</option>
+                            <option> Admins </option>
                         </select>
                     </div>
                     <br>
