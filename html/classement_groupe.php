@@ -27,7 +27,7 @@
             <tr>
               <td>
                  <div id="tableauin">
-                    <table id="tablein" cellspacing="0" cellpadding="1" border="0" width="300" >
+                    <table id="tablein" cellspacing="0" cellpadding="1" width="300" >
                         <?php
                             /*Affiche le classement des joueurs dans l ordre*/
                             $query = $pdo->query("Select Classe, avg(Score) AS moyenne from Joueurs GROUP BY Classe ORDER BY moyenne DESC")->fetchAll();

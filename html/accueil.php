@@ -15,16 +15,6 @@ $idj = $ok["IDJ"];
 $_SESSION["IDJ"] = $idj;
 
 /* Tests invisibles pour les utilisateurs mobiles */
-echo " -- ";
-echo $_SESSION['Prenom'];
-echo $_SESSION['Nom'];
-echo " -- ";
-echo $PrenomAcc;
-echo $NomAcc;
-echo " -- ";
-echo $idj;
-echo " -- ";
-echo $_SESSION['IDJ'];
 ?>
 
 <body>

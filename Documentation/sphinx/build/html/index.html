@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Présentation du projet et sa documentation! &mdash; quiz 1.2 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="#" class="icon icon-home"> quiz
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Présentation du projet et sa documentation!</a></li>
+<li><a class="reference internal" href="#sommaire">Sommaire</a></li>
+<li><a class="reference internal" href="#explication-projet">Explication projet</a><ul>
+<li><a class="reference internal" href="#problematique">Problematique</a></li>
+<li><a class="reference internal" href="#demandes-et-contraintes">Demandes et contraintes</a></li>
+<li><a class="reference internal" href="#organisation-projet">Organisation projet</a><ul>
+<li><a class="reference internal" href="#arborescence">Arborescence</a></li>
+<li><a class="reference internal" href="#organisatiuon-base-de-donnee">Organisatiuon Base de donnée</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-php">Module PHP</a><ul>
+<li><a class="reference internal" href="#initiation-de-la-connexion">Initiation de la connexion</a></li>
+<li><a class="reference internal" href="#recuperation-de-l-id-session">Récupération de l’id session</a></li>
+<li><a class="reference internal" href="#deconnexion">Déconnexion</a></li>
+<li><a class="reference internal" href="#connexion-a-la-base-de-donnee">Connexion à la base de donnée</a></li>
+<li><a class="reference internal" href="#ajout-du-score">Ajout du score</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#classes-variables-utilisees">Classes / Variables   utilisées</a><ul>
+<li><a class="reference internal" href="#session"><span class="xref std std-ref">$_SESSION</span></a></li>
+<li><a class="reference internal" href="#joueur"><span class="xref std std-ref">Joueur</span></a></li>
+<li><a class="reference internal" href="#question"><span class="xref std std-ref">Question</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">quiz</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Présentation du projet et sa documentation!</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="presentation-du-projet-et-sa-documentation">
+<h1>Présentation du projet et sa documentation!<a class="headerlink" href="#presentation-du-projet-et-sa-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="sommaire">
+<h1>Sommaire<a class="headerlink" href="#sommaire" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Explication projet</p></li>
+<li><p>Module PHP</p></li>
+<li><p>Variables Utilisées</p></li>
+</ul>
+</div>
+<div class="section" id="explication-projet">
+<h1>Explication projet<a class="headerlink" href="#explication-projet" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="problematique">
+<h2>Problematique<a class="headerlink" href="#problematique" title="Permalink to this headline">¶</a></h2>
+<p>Réaliser un site de quiz en ligne dans le but de départager 120 élèves.</p>
+<p>Avec pour thèmes les Mathématique et la Physique-Chimie.</p>
+</div>
+<div class="section" id="demandes-et-contraintes">
+<h2>Demandes et contraintes<a class="headerlink" href="#demandes-et-contraintes" title="Permalink to this headline">¶</a></h2>
+<p>La collecte d’informations :</p>
+<ol class="arabic simple">
+<li><p>Le Nom</p></li>
+<li><p>Le Prénom</p></li>
+<li><p>La Classe</p></li>
+</ol>
+<p>Le QCM devra avoir :</p>
+<ol class="arabic simple">
+<li><p>4 propositions de réponse à chaque question</p></li>
+<li><p>1 seule réponse de juste</p></li>
+<li><p>20 questions au total</p></li>
+</ol>
+<p>L’annonce des resultat ce fait lorsque tout les joueurs ont terminée le quiz</p>
+<p>2 Classement :</p>
+<ol class="arabic simple">
+<li><p>Un par joueur</p></li>
+<li><p>L’autre par classe</p></li>
+</ol>
+</div>
+<div class="section" id="organisation-projet">
+<h2>Organisation projet<a class="headerlink" href="#organisation-projet" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="arborescence">
+<h3>Arborescence<a class="headerlink" href="#arborescence" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Quiz_Savant
+ ├── AUTHORS
+ ├── Documentation
+ │   ├── cahier_des_charges_Quiz_Savant.pdf
+ │   └── Guide_d&#39;installation.pdf
+ ├── helper
+ │   ├── connection.php
+ │   ├── header.php
+ │   ├── rng.php
+ │   ├── schema.sql
+ │   └── session.php
+ ├── html
+ │   ├── accueil.php
+ │   ├── admin.php
+ │   ├── ajout_score.php
+ │   ├── assets
+ │   │   ├── images
+ │   │   │   ├── logo2.png
+ │   │   │   ├── logo_git.png
+ │   │   │   ├── logo.png
+ │   │   │   ├── question10.png
+ │   │   │   ├── question11.png
+ │   │   │   ├── question12.png
+ │   │   │   ├── question13.png
+ │   │   │   ├── question14.png
+ │   │   │   ├── question15.png
+ │   │   │   ├── question16.png
+ │   │   │   ├── question17.png
+ │   │   │   ├── question18.png
+ │   │   │   ├── question19.png
+ │   │   │   ├── question1.png
+ │   │   │   ├── question20.png
+ │   │   │   ├── question2.png
+ │   │   │   ├── question3.png
+ │   │   │   ├── question4.png
+ │   │   │   ├── question5.png
+ │   │   │   ├── question6.png
+ │   │   │   ├── question7.png
+ │   │   │   ├── question8.png
+ │   |   │   └── question9.png
+ │   │   ├── js
+ │   │   │   ├── calcule_points.js
+ │   │   │   ├── choix.js
+ │   │   │   ├── comparaison_envoie.js
+ │   │   │   └── jquery.min.js
+ │   │   ├── style_accueil.css
+ │   │   ├── style_admin.css
+ │   │   ├── style_classement.css
+ │   │   ├── style_classement_groupe.css
+ │   │   ├── style_index.css
+ │   │   └── style_question.css
+ │   ├── classement_groupe.php
+ │   ├── classement.php
+ │   ├── index.php
+ │   ├── logout_admin.php
+ │   ├── logout.php
+ │   └── question.php
+ └── README.rst
+ ...
+</pre></div>
+</div>
+</div>
+<div class="section" id="organisatiuon-base-de-donnee">
+<h3>Organisatiuon Base de donnée<a class="headerlink" href="#organisatiuon-base-de-donnee" title="Permalink to this headline">¶</a></h3>
+<p>Table joueurs:</p>
+<table class="colwidths-given docutils align-default" id="id1">
+<caption><span class="caption-text">Table Joueurs</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>‘IDJ’ INT NOT NULL AUTO INCREMENT</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>‘Nom’ VARCHAR(20) NOT NULL</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘Prenom’ VARCHAR(20) NOT NULL</p></td>
+</tr>
+<tr class="row-even"><td><p>‘Classe’ VARCHAR(20) NOT NULL</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘Score’ int(4) NOT NULL</p></td>
+</tr>
+</tbody>
+</table>
+<p>Cette table nous sert à stocker les informations du joueur notament son score afin d’établir le classement de fin de partie</p>
+<p>Table questions:</p>
+<table class="colwidths-given docutils align-default" id="id2">
+<caption><span class="caption-text">Table Question</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>‘IDJ’ INT NOT NULL AUTO INCREMENT</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>‘Q’ VARCHAR(150) NOT NULL</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘A’ VARCHAR(50) NOT NULL</p></td>
+</tr>
+<tr class="row-even"><td><p>‘B’ VARCHAR(50) NOT NULL</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘C’ VARCHAR(50) NOT NULL</p></td>
+</tr>
+<tr class="row-even"><td><p>‘D’ VARCHAR(50) NOT NULL</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘R’ VARCHAR(50) NOT NULL</p></td>
+</tr>
+<tr class="row-even"><td><p>‘Image’ VARCHAR(100) NOT NULL</p></td>
+</tr>
+</tbody>
+</table>
+<p>Cette table stocke les informations relative aux questions : les images associées à chaque question , la bonne reponse.</p>
+<p>Table Intermediare:</p>
+<table class="colwidths-given docutils align-default" id="id3">
+<caption><span class="caption-text">Table Intermediaire</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>‘IDJI’ INT(2) NOT NULL</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>‘IDQI’ INT(2) NOT NULL</p></td>
+</tr>
+</tbody>
+</table>
+<p>Cette table est utilisée pour générer une question aleatoire</p>
+</div>
+</div>
+</div>
+<div class="section" id="module-php">
+<h1>Module PHP<a class="headerlink" href="#module-php" title="Permalink to this headline">¶</a></h1>
+<p>Nous avons principalement utiliser le language PHP pour ce projet
+que l’on a agrémenter de HTML et de CSS .</p>
+<p>Nous avons utilisé mariaDB comme base de donnée.</p>
+<p>le site est hébergé sur une adresse en ligne et est donc accessible de partout.</p>
+<p>A l’adresse <a class="reference external" href="http://82.125.8.128/">http://82.125.8.128/</a> .</p>
+<div class="section" id="initiation-de-la-connexion">
+<h2>Initiation de la connexion<a class="headerlink" href="#initiation-de-la-connexion" title="Permalink to this headline">¶</a></h2>
+<p>Dans ce code nous recuperons les informations données sur la première page .
+On envoie une requête vers la BDD pour alimenter la table Joueur .
+On ajoute aussi les informations à $_SESSION et on vérifie la connection.</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;?</span><span class="nx">php</span>
+    <span class="cm">/* Requete pour inserer les données dans la database */</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">&quot;REQUEST_METHOD&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;POST&quot;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$Nom</span><span class="o">=</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;nom&#39;</span><span class="p">];</span>
+        <span class="nv">$Prenom</span><span class="o">=</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;prenom&#39;</span><span class="p">];</span>
+        <span class="nv">$Classe</span><span class="o">=</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;classe&#39;</span><span class="p">];</span>
+        <span class="nv">$Score</span><span class="o">=</span> <span class="s1">&#39;0&#39;</span><span class="p">;</span>
+
+        <span class="nv">$query</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">&quot;INSERT INTO Joueurs (Prenom, Nom, Classe, Score)</span>
+<span class="s2">        VALUES (:Prenom, :Nom, :Classe, :Score)&quot;</span><span class="p">);</span>
+        <span class="nv">$success</span> <span class="o">=</span> <span class="nv">$query</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span>
+              <span class="s2">&quot;Nom&quot;</span> <span class="o">=&gt;</span> <span class="nv">$Nom</span><span class="p">,</span>
+              <span class="s2">&quot;Prenom&quot;</span> <span class="o">=&gt;</span> <span class="nv">$Prenom</span><span class="p">,</span>
+              <span class="s2">&quot;Classe&quot;</span> <span class="o">=&gt;</span> <span class="nv">$Classe</span><span class="p">,</span>
+              <span class="s2">&quot;Score&quot;</span> <span class="o">=&gt;</span> <span class="nv">$Score</span><span class="p">,</span>
+        <span class="p">]);</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="nv">$success</span><span class="p">){</span>
+        <span class="k">echo</span> <span class="s2">&quot;Le joueur a bien été ajouter !&quot;</span><span class="p">;</span>
+        <span class="nb">session_start</span><span class="p">();</span>
+        <span class="cm">/* On met le prenom et le nom dans une variable de Session */</span>
+        <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;logon&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+        <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;Prenom&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$Prenom</span><span class="p">;</span>
+        <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;Nom&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$Nom</span><span class="p">;</span>
+        <span class="p">}</span><span class="k">else</span> <span class="p">{</span>
+            <span class="nv">$error</span> <span class="o">=</span> <span class="nv">$query</span><span class="o">-&gt;</span><span class="na">errorInfo</span><span class="p">()[</span><span class="mi">2</span><span class="p">];</span>
+            <span class="k">echo</span> <span class="s2">&quot;Erreur : </span><span class="si">$error</span><span class="s2"> </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span><span class="cp">?&gt;</span><span class="x"></span>
+
+<span class="x">    /* Verification de la connection */</span>
+<span class="x">    </span><span class="cp">&lt;?php</span> <span class="k">if</span><span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;logon&#39;</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;logon&#39;</span><span class="p">]</span> <span class="o">===</span> <span class="k">true</span><span class="p">)</span><span class="o">:</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">        </span><span class="cp">&lt;?php</span> <span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Location: /accueil.php&#39;</span><span class="p">);</span>
+        <span class="k">die</span><span class="p">();</span>
+        <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">...</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="recuperation-de-l-id-session">
+<h2>Récupération de l’id session<a class="headerlink" href="#recuperation-de-l-id-session" title="Permalink to this headline">¶</a></h2>
+<p>On utilise session_id() pour récupérer l’id de session s’il existe.
+Si l’id de session n’existe  pas, session_id() renvoie une chaine
+de caractères.</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;?</span><span class="nx">php</span>
+     <span class="nv">$id_session</span> <span class="o">=</span> <span class="nb">session_id</span><span class="p">();</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="nv">$id_session</span><span class="p">){</span>
+           <span class="k">echo</span> <span class="s1">&#39;ID de session (récupéré via session_id()) : &lt;br&gt;&#39;</span>
+           <span class="o">.</span><span class="nv">$id_session</span><span class="o">.</span> <span class="s1">&#39;&lt;br&gt;&#39;</span><span class="p">;</span>
+        <span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+
+<span class="x">...</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="deconnexion">
+<h2>Déconnexion<a class="headerlink" href="#deconnexion" title="Permalink to this headline">¶</a></h2>
+<p>Pour la déconnexion on détruit la session puis on redirige l’utilisateur vers la page de connexion.</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;?</span><span class="nx">php</span>
+  <span class="cm">/*  Détruire la session */</span>
+  <span class="k">if</span><span class="p">(</span><span class="nb">session_destroy</span><span class="p">())</span>
+  <span class="p">{</span>
+    <span class="cm">/* Redirection vers la page de connexion */</span>
+    <span class="nb">session_destroy</span><span class="p">();</span>
+    <span class="nb">header</span><span class="p">(</span><span class="s2">&quot;Location: index.php&quot;</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+
+<span class="x">...</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="connexion-a-la-base-de-donnee">
+<h2>Connexion à la base de donnée<a class="headerlink" href="#connexion-a-la-base-de-donnee" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;?</span><span class="nx">php</span> <span class="nv">$pdo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s1">&#39;mysql:host=127.0.0.1;dbname=Savant&#39;</span><span class="p">,</span> <span class="s1">&#39;Savant&#39;</span><span class="p">,</span> <span class="s1">&#39;gtrnet&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
+
+
+
+<span class="x">...</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="ajout-du-score">
+<h2>Ajout du score<a class="headerlink" href="#ajout-du-score" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;?</span><span class="nx">php</span> <span class="k">require</span> <span class="s1">&#39;../helper/connection.php&#39;</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="cp">&lt;?php</span>
+    <span class="nv">$points</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;vitesse&#39;</span><span class="p">];</span>
+    <span class="nv">$score</span> <span class="o">=</span> <span class="nv">$points</span><span class="p">;</span>
+    <span class="nv">$id</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// Préparation de la requête</span>
+    <span class="nv">$sql</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">&quot;UPDATE Joueurs SET Score = score + </span><span class="si">$score</span><span class="s2"> WHERE IDJ = </span><span class="si">$id</span><span class="s2">&quot;</span><span class="p">);</span>
+
+    <span class="c1">// Exécution de la requête</span>
+    <span class="nv">$sql</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">()</span>
+
+    <span class="cp">?&gt;</span><span class="x"></span>
+
+<span class="x">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="classes-variables-utilisees">
+<h1>Classes / Variables   utilisées<a class="headerlink" href="#classes-variables-utilisees" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="session">
+<h2><a class="reference internal" href="session.html#session"><span class="std std-ref">$_SESSION</span></a><a class="headerlink" href="#session" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="joueur">
+<h2><a class="reference internal" href="class.html#class"><span class="std std-ref">Joueur</span></a><a class="headerlink" href="#joueur" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="question">
+<h2><a class="reference internal" href="question.html#question"><span class="std std-ref">Question</span></a><a class="headerlink" href="#question" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Alexis Mael Armand Axel.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
