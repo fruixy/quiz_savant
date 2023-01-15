@@ -1,6 +1,6 @@
 <?php require '../helper/header.php'; ?>
 
-<link rel="stylesheet" type="text/css" href="assets/rien.css" />
+<link rel="stylesheet" type="text/css" href="assets/style_admin.css" />
 
 <html>
 <body>
