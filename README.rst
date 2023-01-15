@@ -1,18 +1,17 @@
-.. image:: https://github.com/fruixy/quiz_savant/blob/master/html/assets/images/logo_git.png?raw=true
-      :align: center
-
 =========================================
 SAE 302 Quiz Savant
 =========================================
 
+.. image:: https://github.com/fruixy/quiz_savant/blob/master/html/assets/images/logo_git.png?raw=true
+      :align: center
 
 ####
 
 Description
 ===========
 
-   - Site web pour tester votre niveau en physique
-   - Dévélopper à la demande__ des BUT Mesures Physiques
+- Site web pour tester votre niveau en physique
+- Dévélopper à la demande__ des BUT Mesures Physiques
    
    __ https://github.com/fruixy/quiz_savant/tree/master/Documentation/cahier_des_charges_Quiz_Savant.pdf
 
