@@ -15,7 +15,6 @@ Description
 
    __ https://github.com/fruixy/quiz_savant/tree/master/Documentation/cahier_des_charges_Quiz_Savant.pdf
 
-
 ####
 
 Installation
@@ -42,6 +41,8 @@ Documentation
 =================
 
 - Analyse de notre code via une page web à l'aide de sphinx
+- Répartition__ des tâches
+__ https://github.com/users/fruixy/projects/3/views/5?groupedBy%5BcolumnId%5D=Assignees
   
   
 ####
