@@ -32,10 +32,17 @@ Installation
 Téléchargement
 ==============
 
-   - Cliquez ici__ pour télécharger la version linux en .zip
+- Cliquez ici__ pour télécharger la version linux en .zip
    __ https://github.com/fruixy/quiz_savant/archive/refs/heads/master.zip
 
 
+####
+
+Documation
+===========
+
+-Description de notre code avec une interface web à l'aide de sphinx__
+   ____ https://github.com/fruixy/quiz_savant/tree/master/Documentation/
 
 ####
 
@@ -118,7 +125,7 @@ __ https://github.com/fruixy
 __ https://github.com/fruixy
 __ https://github.com/AxEl811
 __ https://github.com/AxEl811
-__ https://github.com/Armand-Cloug
-__ https://github.com/Armand-Cloug
 __ https://github.com/Maelbo
 __ https://github.com/Maelbo
+__ https://github.com/Armand-Cloug
+__ https://github.com/Armand-Cloug
