@@ -3,7 +3,7 @@
 require "../helper/connection.php";
 
 /*$IDJ=$_SESSION["IDJ"];*/
-$IDJ= session_id();
+$IDJ=$_SESSION["IDJ"]; 
 $query = $pdo->query("SELECT IDQ FROM Questions WHERE IDQ NOT IN (SELECT IDQI FROM Intermediaire WHERE IDJI= $IDJ)")->fetchAll(); //recupére toutes les questions qui ne sont pas tombées 
 
 if (empty($query)) {  //si la liste est vide 

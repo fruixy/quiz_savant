@@ -17,7 +17,7 @@
 
 
 <!-- On recharge la page au bout de 33 sec -->
-<meta http-equiv="refresh" content="1;url=question.php?IDQ=<?php echo $IDQI?>">
+<meta http-equiv="refresh" content="33;url=question.php?IDQ=<?php echo $IDQI?>">
 
 <html>
 <body>
