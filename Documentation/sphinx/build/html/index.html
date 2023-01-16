@@ -41,17 +41,18 @@
 <li><a class="reference internal" href="#demandes-et-contraintes">Demandes et contraintes</a></li>
 <li><a class="reference internal" href="#organisation-projet">Organisation projet</a><ul>
 <li><a class="reference internal" href="#arborescence">Arborescence</a></li>
-<li><a class="reference internal" href="#organisatiuon-base-de-donnee">Organisatiuon Base de donnée</a></li>
+<li><a class="reference internal" href="#organisation-base-de-donnee">Organisation Base de donnée</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#module-php">Module PHP</a><ul>
+<li><a class="reference internal" href="#module-php-code">Module PHP / Code</a><ul>
 <li><a class="reference internal" href="#initiation-de-la-connexion">Initiation de la connexion</a></li>
 <li><a class="reference internal" href="#recuperation-de-l-id-session">Récupération de l’id session</a></li>
 <li><a class="reference internal" href="#deconnexion">Déconnexion</a></li>
 <li><a class="reference internal" href="#connexion-a-la-base-de-donnee">Connexion à la base de donnée</a></li>
 <li><a class="reference internal" href="#ajout-du-score">Ajout du score</a></li>
+<li><a class="reference internal" href="#code-java-points">Code Java Points</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#classes-variables-utilisees">Classes / Variables   utilisées</a><ul>
@@ -193,9 +194,9 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="organisatiuon-base-de-donnee">
-<h3>Organisatiuon Base de donnée<a class="headerlink" href="#organisatiuon-base-de-donnee" title="Permalink to this headline">¶</a></h3>
-<p>Table joueurs:</p>
+<div class="section" id="organisation-base-de-donnee">
+<h3>Organisation Base de donnée<a class="headerlink" href="#organisation-base-de-donnee" title="Permalink to this headline">¶</a></h3>
+<p>Table Joueurs:</p>
 <table class="colwidths-given docutils align-default" id="id1">
 <caption><span class="caption-text">Table Joueurs</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
 <colgroup>
@@ -217,9 +218,9 @@
 </tbody>
 </table>
 <p>Cette table nous sert à stocker les informations du joueur notament son score afin d’établir le classement de fin de partie</p>
-<p>Table questions:</p>
+<p>Table Questions:</p>
 <table class="colwidths-given docutils align-default" id="id2">
-<caption><span class="caption-text">Table Question</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-text">Table Questions</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
@@ -245,9 +246,9 @@
 </tbody>
 </table>
 <p>Cette table stocke les informations relative aux questions : les images associées à chaque question , la bonne reponse.</p>
-<p>Table Intermediare:</p>
+<p>Table Intermédiaire:</p>
 <table class="colwidths-given docutils align-default" id="id3">
-<caption><span class="caption-text">Table Intermediaire</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-text">Table Intermédiaire</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
@@ -260,17 +261,16 @@
 </tr>
 </tbody>
 </table>
-<p>Cette table est utilisée pour générer une question aleatoire</p>
+<p>Cette table est utilisée pour générer une question aléatoire.</p>
 </div>
 </div>
 </div>
-<div class="section" id="module-php">
-<h1>Module PHP<a class="headerlink" href="#module-php" title="Permalink to this headline">¶</a></h1>
-<p>Nous avons principalement utiliser le language PHP pour ce projet
+<div class="section" id="module-php-code">
+<h1>Module PHP / Code<a class="headerlink" href="#module-php-code" title="Permalink to this headline">¶</a></h1>
+<p>Nous avons principalement utilisé le language PHP pour ce projet
 que l’on a agrémenter de HTML et de CSS .</p>
 <p>Nous avons utilisé mariaDB comme base de donnée.</p>
-<p>le site est hébergé sur une adresse en ligne et est donc accessible de partout.</p>
-<p>A l’adresse <a class="reference external" href="http://82.125.8.128/">http://82.125.8.128/</a> .</p>
+<p>le site peut hébergé sur une adresse en ligne et donc être accessible de partout</p>
 <div class="section" id="initiation-de-la-connexion">
 <h2>Initiation de la connexion<a class="headerlink" href="#initiation-de-la-connexion" title="Permalink to this headline">¶</a></h2>
 <p>Dans ce code nous recuperons les informations données sur la première page .
@@ -321,13 +321,23 @@ On ajoute aussi les informations à $_SESSION et on vérifie la connection.</p>
 Si l’id de session n’existe  pas, session_id() renvoie une chaine
 de caractères.</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;?</span><span class="nx">php</span>
-     <span class="nv">$id_session</span> <span class="o">=</span> <span class="nb">session_id</span><span class="p">();</span>
+<span class="nb">session_start</span><span class="p">();</span>
 
-        <span class="k">if</span><span class="p">(</span><span class="nv">$id_session</span><span class="p">){</span>
-           <span class="k">echo</span> <span class="s1">&#39;ID de session (récupéré via session_id()) : &lt;br&gt;&#39;</span>
-           <span class="o">.</span><span class="nv">$id_session</span><span class="o">.</span> <span class="s1">&#39;&lt;br&gt;&#39;</span><span class="p">;</span>
-        <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
+ <span class="cm">/* Recupere le nom et le prenom du joueur*/</span>
+<span class="nv">$nom</span> <span class="o">=</span> <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;Nom&#39;</span><span class="p">];</span>
+<span class="nv">$prenom</span> <span class="o">=</span> <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;Prenom&#39;</span><span class="p">];</span>
+
+<span class="cm">/* Requete sql pour recuperer l&#39;IDJ en focntion de son nom et prenom*/</span>
+<span class="nv">$query</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">&quot;SELECT IDJ FROM Joueurs WHERE Nom = :nom AND Prenom = :prenom&quot;</span><span class="p">);</span>
+
+<span class="cm">/* Execute la commande sql*/</span>
+<span class="nv">$query</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span>
+   <span class="s2">&quot;nom&quot;</span> <span class="o">=&gt;</span> <span class="nv">$nom</span><span class="p">,</span>
+   <span class="s2">&quot;prenom&quot;</span> <span class="o">=&gt;</span> <span class="nv">$prenom</span>
+<span class="p">]);</span>
+
+<span class="nv">$player</span> <span class="o">=</span> <span class="nv">$query</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">();</span>
+<span class="nv">$IDJ</span> <span class="o">=</span> <span class="nv">$player</span><span class="p">[</span><span class="s1">&#39;IDJ&#39;</span><span class="p">];</span> <span class="cp">?&gt;</span><span class="x"></span>
 
 <span class="x">...</span>
 </pre></div>
@@ -379,6 +389,24 @@ de caractères.</p>
 <span class="x">...</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="code-java-points">
+<h2>Code Java Points<a class="headerlink" href="#code-java-points" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">let</span> <span class="n">points</span> <span class="o">=</span> <span class="mi">101</span><span class="p">;</span> <span class="o">/*</span> <span class="n">déclare</span> <span class="n">une</span> <span class="n">variable</span> <span class="s2">&quot;points&quot;</span> <span class="n">avec</span> <span class="n">une</span> <span class="n">valeur</span> <span class="n">initiale</span> <span class="n">de</span> <span class="mi">101</span><span class="o">*/</span>
+<span class="n">let</span> <span class="n">vitesse</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span> <span class="o">/*</span> <span class="n">déclare</span> <span class="n">une</span> <span class="n">variable</span> <span class="s2">&quot;vitesse&quot;</span> <span class="n">qui</span> <span class="n">est</span> <span class="n">initialisée</span> <span class="n">vide</span><span class="o">*/</span>
+
+<span class="o">/*</span> <span class="n">déclare</span> <span class="n">une</span> <span class="n">fonction</span> <span class="s2">&quot;decreasePoints&quot;</span> <span class="n">qui</span> <span class="n">décrémente</span> <span class="n">la</span> <span class="n">valeur</span> <span class="n">de</span> <span class="n">la</span> <span class="n">variable</span> <span class="s2">&quot;points&quot;</span> <span class="n">de</span> <span class="mi">1</span> <span class="n">à</span> <span class="n">chaque</span> <span class="n">appel</span><span class="o">*/</span>
+  <span class="n">function</span> <span class="n">decreasePoints</span><span class="p">()</span> <span class="p">{</span>
+     <span class="n">points</span><span class="o">--</span><span class="p">;</span>
+  <span class="p">}</span>
+
+   <span class="o">/*</span> <span class="n">utilise</span> <span class="n">la</span> <span class="n">fonction</span> <span class="n">setInterval</span> <span class="n">pour</span> <span class="n">appeler</span> <span class="n">la</span> <span class="n">fonction</span> <span class="s2">&quot;decreasePoints&quot;</span> <span class="n">toutes</span> <span class="n">les</span> <span class="mi">300</span> <span class="n">millisecondes</span><span class="o">*/</span>
+      <span class="n">setInterval</span><span class="p">(</span><span class="n">decreasePoints</span><span class="p">,</span> <span class="mi">300</span><span class="p">);</span>
+
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>Ce code nous permet d’établir la valeur des points ici plus on répond rapidement et plus on a de point avec un algoritme qui décremente les points en fonction du temps</p>
 </div>
 </div>
 <div class="section" id="classes-variables-utilisees">

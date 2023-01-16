@@ -118,10 +118,10 @@ Arborescence
     └── README.rst
     ...
 
-Organisatiuon Base de donnée
+Organisation Base de donnée
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Table joueurs:
+Table Joueurs:
 
 .. list-table:: Table Joueurs
    :widths: 100
@@ -136,9 +136,9 @@ Table joueurs:
 Cette table nous sert à stocker les informations du joueur notament son score afin d'établir le classement de fin de partie   
 
 
-Table questions:
+Table Questions:
 
-.. list-table:: Table Question
+.. list-table:: Table Questions
    :widths: 100
    :header-rows: 1
 
@@ -153,33 +153,31 @@ Table questions:
 
 Cette table stocke les informations relative aux questions : les images associées à chaque question , la bonne reponse.
 
-Table Intermediare:
+Table Intermédiaire:
 
-.. list-table:: Table Intermediaire
+.. list-table:: Table Intermédiaire
    :widths: 100
    :header-rows: 1
 
    * - 'IDJI' INT(2) NOT NULL
    * - 'IDQI' INT(2) NOT NULL
 
-Cette table est utilisée pour générer une question aleatoire
+Cette table est utilisée pour générer une question aléatoire.
 
 
 
 
 
 
-Module PHP
-===========
+Module PHP / Code
+=================
 
-Nous avons principalement utiliser le language PHP pour ce projet
+Nous avons principalement utilisé le language PHP pour ce projet
 que l'on a agrémenter de HTML et de CSS .
 
 Nous avons utilisé mariaDB comme base de donnée.
 
-le site est hébergé sur une adresse en ligne et est donc accessible de partout.
-
-A l'adresse http://82.125.8.128/ .
+le site peut hébergé sur une adresse en ligne et donc être accessible de partout
 
 Initiation de la connexion
 --------------------------
@@ -238,14 +236,24 @@ de caractères.
 .. code-block:: php
 
     <?php
-         $id_session = session_id();
-         
-            if($id_session){
-               echo 'ID de session (récupéré via session_id()) : <br>'
-               .$id_session. '<br>';
-            }
-    ?>
-
+    session_start();
+     
+     /* Recupere le nom et le prenom du joueur*/
+    $nom = $_SESSION['Nom'];
+    $prenom = $_SESSION['Prenom'];
+    
+    /* Requete sql pour recuperer l'IDJ en focntion de son nom et prenom*/
+    $query = $pdo->prepare("SELECT IDJ FROM Joueurs WHERE Nom = :nom AND Prenom = :prenom");
+       
+    /* Execute la commande sql*/
+    $query->execute([
+       "nom" => $nom,
+       "prenom" => $prenom
+    ]);
+     
+    $player = $query->fetch();
+    $IDJ = $player['IDJ']; ?>
+    
     ...
 
 
@@ -310,6 +318,30 @@ Ajout du score
 
     ...
 
+Code Java Points
+----------------
+
+
+.. code-block::
+    
+    
+    let points = 101; /* déclare une variable "points" avec une valeur initiale de 101*/
+    let vitesse = ""; /* déclare une variable "vitesse" qui est initialisée vide*/
+    
+    /* déclare une fonction "decreasePoints" qui décrémente la valeur de la variable "points" de 1 à chaque appel*/
+      function decreasePoints() {
+         points--;
+      }
+      
+       /* utilise la fonction setInterval pour appeler la fonction "decreasePoints" toutes les 300 millisecondes*/
+          setInterval(decreasePoints, 300);
+    
+    ...
+
+Ce code nous permet d'établir la valeur des points ici plus on répond rapidement et plus on a de point avec un algoritme qui décremente les points en fonction du temps 
+
+
+
 Classes / Variables   utilisées
 =================================
 
@@ -323,4 +355,3 @@ Classes / Variables   utilisées
 
 :ref:`Question<question>`
 -------------------------
-
