@@ -19,7 +19,7 @@ $_SESSION["IDJ"] = $idj;
 
 <body>
     <div class="logo">
-        <a href="./logout.php" > <img src="./assets/images/logo.png" alt="" height="110%;"> </a>
+        <a> <img src="./assets/images/logo.png" alt="" height="110%;"> </a>
     </div>
     <div class="regle">
         <ul>

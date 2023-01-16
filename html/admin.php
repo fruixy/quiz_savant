@@ -5,34 +5,25 @@
 <html>
 <body>
 
-    <div>
-        <?php 
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $Mdp=$_POST['mdp'];
-            $Prenom=$_POST['prenom'];
-        }
-
-        $query = $pdo->prepare("SELECT * FROM Joueurs WHERE Prenom=:Prenom and Nom=:Nom");
-        $success = $query->execute(["Prenom" => $Prenom, "Nom" => $Mdp,]);
-        $ok = $query->fetch(PDO::FETCH_ASSOC);
-
-        if($success){
-            $Admin = $ok['IDJ'];
-            if( $Admin == '1'){
-                echo "Le joueur a bien été ajouter !";
-                session_start();
-                $_SESSION['logon_admin'] = true;
-            }
-        }
-        ?>
-
-        <?php if(isset($_SESSION['logon_admin']) && $_SESSION['logon_admin'] === true):
-            header('Location: /classement.php');
-            die();
-            ?>
-
+        <?php if(isset($_POST['username']) && isset($_POST['password'])){ 
+                    if($_POST['username'] === "admin" && $_POST['password'] === "admin"){
+                        $_SESSION['admin'] = true; 
+                        
+                        } else {
+                            echo "es-tu vraiment l'admin ?"; 
+                        }
+                    }
+                ?>
+        <?php if(isset($_SESSION['admin']) && $_SESSION['admin'] === true): ?>
+            <a class="text">Vous êtes admin !</a>
+            <br>
+            <a class="text">accèder au classement ici</a>
+            <br>
+            <a href="./classement.php" class="text"><button>classement</button></a>
+        
+        
         <?php else: ?>
-
+        
         <div class="div-logo">
             <img src=".\assets\images\logo2.png" alt="" class="logo">
         </div>
@@ -41,12 +32,12 @@
                 <fieldset>
                     <div class="divindex">
                         <label for="prenom"></label>
-                        <input id="prenom" name="prenom" type="text" name="text" placeholder="Prénom" required="required" />
+                        <input id="prenom" name="username" type="text" name="username" placeholder="pseudo" required="required" />
                     </div>
                     <br> 
                     <div class="divindex">
                         <label for="mdp"></label>
-                        <input id="mdp" name="mdp" type="password" name="password" placeholder="Mdp" required="required" />
+                        <input id="mdp" name="password" type="password" name="password" placeholder="Mdp" required="required" />
                     </div>
                     <br>
                     <div>
@@ -56,6 +47,5 @@
             </form>
         </div>
         <?php endif;?>
-    </div>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <link rel="stylesheet" type="text/css" href="./assets/style_classement_groupe.css" />
 <body>
     <div id="tete">
-        <a id="logo" href='/logout_admin.php' ><img src="assets/images/logo.png" height="100%"></a>
+        <a id="logo" ><img src="assets/images/logo.png" height="100%"></a>
     
         <div id="div_B">
             <a href='/classement.php' > <button id="b1" class="text-button">ClassementJoueurs </button></a>
