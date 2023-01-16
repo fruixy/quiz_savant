@@ -40,7 +40,7 @@ Téléchargement
 Documentation
 =================
 
-- Analyse de notre code via une page web à l'aide de sphinx
+- Analyse de notre code via une page web à l'aide de sphinx disponible dans : Documentation/sphinx/build/html/index.html
 - Répartition__ des tâches
 __ https://github.com/users/fruixy/projects/3/views/5?groupedBy%5BcolumnId%5D=Assignees
   
